@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lista de Tarefas</title>
+	<link rel="stylesheet" href="src/css/style.css" media="all">
+	<link rel="manifest" href="src/json/manifest.json">
+</head>
+<body>
+	<h1>📋 Lista de Tarefas</h1>
+	<input type="text" id="nova-tarefa" placeholder="Digite uma tarefa">
+	<button class="botao" onclick="adicionarTarefa()">Adicionar</button>
+	<ul id="lista-tarefas"></ul>
+
+	<script src="src/js/script.js"></script>
+	<script>
+		if ('serviceWorker' in navigator) {
+		  navigator.serviceWorker.register('/service-worker.js')
+			.then(() => console.log("✅ Service Worker registrado!"))
+			.catch(err => console.error("❌ Erro ao registrar o Service Worker:", err));
+		}
+	</script>	  
+</body>
+</html>

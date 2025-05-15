@@ -1,0 +1,123 @@
+/* Reset CSS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Variáveis */
+:root {
+	--cor-fundo: #f7f7f7;
+	--cor-verde: #4caf50;
+	--cor-branca: white;
+	--cor-branca-2: #f9f9f9;
+	--cor-cinza: #333;
+	--cor-cinza-2: #888;
+}
+
+/* Corpo */
+body {
+	font-family: sans-serif;
+	text-align: center;
+	margin: 20px;
+	background-color: var(--cor-fundo);
+}
+
+/* Input */
+input {
+	padding: 10px;
+	width: 60%;
+	margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.2);
+	margin-right: 12px;
+	cursor: pointer;
+}
+
+/* Button */
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 4px;
+}
+
+.botao {
+	padding: 10px 20px;
+	margin-left: 10px;
+	background-color: var(--cor-verde);
+	color: var(--cor-branca);
+	border: none;
+	cursor: pointer;
+}
+
+.btn-remover {
+	float: right;
+	background: none;
+	border: none;
+	color: red;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.concluida {
+	text-decoration: line-through;
+	color: var(--cor-cinza-2);
+}
+
+/* Lista de tarefas */
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: white;
+	margin: 10px auto;
+	padding: 10px 16px;
+	width: 40%;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	transition: all 0.3s ease-in-out;
+}
+
+li:hover {
+	transform: scale(1.01);
+	background-color: var(--cor-branca-2);
+}
+
+li span {
+	flex: 1;
+	text-align: left;
+	font-size: 16px;
+	color: var(--cor-cinza);
+	padding-left: 12px;
+}
+
+li .acoes {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.dragging {
+	opacity: 0.5;
+	border: 2px dashed #4caf50;
+}
+
+/* Icone */
+.icon {
+	width: 22px;
+	height: 22px;
+	margin-left: 10px;
+	transition: transform 0.2s ease;
+}
+
+.icon:hover {
+	transform: scale(1.2);
+}
