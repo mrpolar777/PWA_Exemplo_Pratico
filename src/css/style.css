@@ -123,8 +123,18 @@ li .acoes {
 }
 
 /* Responsividade Mobile */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
+  input[type="text"] {
+    width: calc(100% - 40px);
+  }
+
   li {
-    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+	width: 80%;
+  }
+
+  button.botao {
+    width: calc(100% - 40px);
   }
 }
